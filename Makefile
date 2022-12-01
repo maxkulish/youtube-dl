@@ -15,6 +15,10 @@ help: Makefile
 build:
 	goreleaser --rm-dist
 
+.PHONY: build-local
+build-local:
+	goreleaser build --single-target --rm-dist --snapshot -f .goreleaser.yml
+
 ## deps: Ensures fresh go.mod and go.sum
 .PHONY: deps
 deps:

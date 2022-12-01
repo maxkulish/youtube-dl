@@ -8,13 +8,10 @@ builds:
   - main: ./cmd/youtubedr
     binary: youtubedr
     goos:
-      - windows
       - darwin
       - linux
-      - freebsd
     goarch:
       - amd64
-      - arm
       - arm64
     flags:
       - -trimpath
